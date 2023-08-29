@@ -1,0 +1,98 @@
+{
+  "name": "customerlogin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@devexpress/dx-react-chart": "^2.7.6",
+    "@devexpress/dx-react-chart-material-ui": "^2.7.6",
+    "@devexpress/dx-react-core": "^2.7.6",
+    "devextreme": "^21.2.5",
+    "devextreme-react": "21.1.4",
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/data-grid": "^4.0.0-alpha.37",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "@material-ui/pickers": "^4.0.0-alpha.12",
+    "@mui/lab": "^5.0.0-alpha.53",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "cross-var": "^1.1.0",
+    "date-fns": "^2.25.0",
+    "dotenv-cli": "^4.0.0",
+    "env-cmd": "^10.1.0",
+    "node-sass": "^4.14",
+    "react": "^17.0.2",
+    "react-app-polyfill": "^2.0.0",
+    "react-app-rewire-alias": "^1.0.1",
+    "react-app-rewired": "^2.1.8",
+    "react-device-detect": "^1.17.0",
+    "react-document-meta": "^1.1.0",
+    "react-dom": "^17.0.2",
+    "react-full-height": "^1.2.2",
+    "react-ga": "^3.3.0",
+    "react-google-places-autocomplete": "^3.3.2",
+    "react-google-recaptcha": "^2.1.0",
+    "react-hook-popup": "^1.1.0",
+    "react-loader-spinner": "^4.0.0",
+    "react-meta-tags": "^1.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-slick": "^0.28.1",
+    "react-star-ratings": "^2.3.0",
+    "slick-carousel": "^1.8.1",
+    "source-map-explorer": "^2.5.2",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "start": "react-app-rewired start",
+    "start:local": "./node_modules/.bin/env-cmd -f ./.env.local react-app-rewired start",
+    "start:uat": "./node_modules/.bin/env-cmd -f ./.env.uat react-app-rewired start",
+    "start:staging": "./node_modules/.bin/env-cmd -f ./.env.staging react-app-rewired start",
+    "start:prod": "./node_modules/.bin/env-cmd -f ./.env.prod react-app-rewired start",
+    "build": "react-app-rewired --max_old_space_size=2510 build",
+    "build:local": "./node_modules/.bin/env-cmd -f ./.env.local react-app-rewired --max_old_space_size=2510 build",
+    "build:uat": "./node_modules/.bin/env-cmd -f ./.env.uat react-app-rewired --max_old_space_size=2510 build",
+    "build:staging": "./node_modules/.bin/env-cmd -f ./.env.staging react-app-rewired --max_old_space_size=2510 build",
+    "build:prod": "./node_modules/.bin/env-cmd -f ./.env.prod react-app-rewired --max_old_space_size=2510 build",
+    "test": "react-app-rewired test",
+    "test:local": "./node_modules/.bin/env-cmd -f ./.env.local react-app-rewired test",
+    "test:uat": "./node_modules/.bin/env-cmd -f ./.env.uat react-app-rewired test",
+    "test:staging": "./node_modules/.bin/env-cmd -f ./.env.staging react-app-rewired test",
+    "test:prod": "./node_modules/.bin/env-cmd -f ./.env.prod react-app-rewired test",
+    "eject": "react-scripts eject",
+    "eject:local": "./node_modules/.bin/env-cmd -f ./.env.local react-scripts eject",
+    "eject:uat": "./node_modules/.bin/env-cmd -f ./.env.uat react-scripts eject",
+    "eject:staging": "./node_modules/.bin/env-cmd -f ./.env.staging react-scripts eject",
+    "eject:prod": "./node_modules/.bin/env-cmd -f ./.env.prod react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "@assets/(.*)": "<rootDir>/src/assets/$1",
+      "@components/(.*)": "<rootDir>/src/component/$1",
+      "@utils/(.*)": "<rootDir>/src/utils/$1",
+      "@views/(.*)": "<rootDir>/src/views/$1"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "IE 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "IE 11"
+    ]
+  }
+}

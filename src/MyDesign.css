@@ -1,0 +1,18 @@
+  .left-side{
+    height : 700px;
+    background-color: #00A274;
+  }
+  .right-side{
+    height : 700px;
+    background-color: #F6F6F6;
+  }
+  .container-main{
+      height: 700px;
+  }
+  .item{
+      text-align: center;
+      color: white;
+  }
+  .middle{
+      margin-bottom:50%;
+  }

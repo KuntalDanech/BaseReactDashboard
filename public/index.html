@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192_new.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32_new.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96_new.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon_new.png">
+    <link rel="manifest" href="favicon/manifest.json">
+       
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="CSSStyleSheet.css"/>
+	<link rel="stylesheet" href="webchat/style.css"/>
+	<link rel="stylesheet" href="dx.light.css"/>
+    <title>FUJIFILM Business Innovation Australia</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      Web Chat Code start
+    -->
+        <!-- CHAT SCRIPT START	
+-- SiteCore
+--@JT2020 v5
+-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<style>
+
+</style>
+<link rel="stylesheet" href="/assets/fuji-xerox/css/local-css/aus/en/local.css" />
+<script type="application/javascript" src="webchat/jquery.min.3.5.1.js"></script>
+<script src="/assets/fuji-xerox/js/typesquare.js"></script>
+
+<!-- CUSTOMER -->
+<script type="application/javascript" src="https://apps.mypurecloud.jp/widgets/9.0/cxbus.min.js" onload="javascript:CXBus.configure({debug:false,pluginsPath:'https://apps.mypurecloud.jp/widgets/9.0/plugins/'}); CXBus.loadPlugin('widgets-core');"></script>
+<script type="text/javascript">
+
+		window._genesys = {
+            widgets: {
+				main: {
+					downloadGoogleFont : false,
+					themes :{
+							"fx": "cx-theme-fx"
+						},
+					//theme: 'light',
+					theme: 'fx',
+                    // lang: "en",
+					preload: ['webchat']			
+				},
+				webchat: {
+					transport: {
+						type: 'purecloud-v2-sockets',
+						dataURL: 'https://api.mypurecloud.jp',
+						emojis: true,
+						uploadsEnabled: true,
+						actionsMenu: true,
+						maxMessageLength: 140,
+						deploymentKey : '75e2772c-7105-4cc1-8732-bff5d229cadd',
+						orgGuid : 'e2deb0aa-b572-4928-a791-ef179f9e81df',
+						interactionData: {
+							routing: {
+								targetType: 'QUEUE',
+								targetAddress: '',
+								priority: 2
+							}
+						},
+					},					
+				},
+			}
+        };
+		const customPlugin = CXBus.registerPlugin('Custom');
+	
+		customPlugin.subscribe('WebChatService.started', function (e) {
+		  console.log('Chat started', e);
+		});
+		
+		customPlugin.subscribe('WebChatService.clientDisconnected', function (e) {
+		  console.log('Chat clientDisconnected', e);
+		});
+		
+		customPlugin.subscribe('WebChat.closed', function (e) {
+		  console.log('Chat closed', e);
+		  $('.chatpopoverlay, .popup').fadeIn(100);
+		});
+
+		customPlugin.subscribe('WebChatService.error', function (e) {
+		  console.log('Chat error', e);
+		});
+
+
+		customPlugin.subscribe('WebChatService.ended', function (e) {
+		  console.log('Chat ended', e);
+		});
+
+</script>
+
+<script type="text/javascript">
+	</script>
+	
+<!--PROACTIVE-->
+<script type="text/javascript">
+	</script>
+	
+<script>
+//proactivePopUp()
+
+function proactivePopUp() {
+  setTimeout(function(){ $(customPlugin.command('WebChat.open',getAdvancedConfigProactive()));$('.overlay, .popup').fadeOut(100); }, 10000);
+
+}
+</script>
+<!-- CHAT END -->
+
+
+
+</body>
+</html>

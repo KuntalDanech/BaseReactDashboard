@@ -1,0 +1,98 @@
+.new-feature-tooltip-login-page{
+    z-index:9999999;
+    position: fixed;
+    margin-left:-189px;
+    margin-top: 14px;
+    border-radius: 6px;
+    padding : 10px !important;
+    padding: 6px;
+    font-size: 14px;
+    white-space: normal;
+    background-color: white !important;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    color: #01916D;
+    white-space: normal;
+    width: 400px;
+    border-left: 3px solid white;
+   
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .new-feature-tooltip-login-page{
+        z-index:9999999;
+        position: fixed;
+        margin-left:-770px;
+        margin-top: 14px;
+        border-radius: 6px;
+        padding : 10px !important;
+        padding: 6px;
+        font-size: 14px;
+        white-space: normal;
+        background-color: white !important;
+        box-shadow: 1px 1px 1px 1px lightgray;
+        color: #01916D;
+        white-space: normal;
+        width: 400px;
+        border-left: 3px solid white;
+       
+    }
+}
+.new-feature-tooltip-login-page .green-border-btn{
+    float: right;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}
+
+  .new-feature-tooltip-login-page:before{
+  content: '';
+  position: absolute;
+  right: 100%;
+  left:44%;
+  bottom:160px;
+  border: 11px solid white;
+  border-top-color:transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+@media(max-width:991px) {
+    .relative{
+        position: relative !important;
+        left:-100px;
+    }
+    .new-feature-tooltip-login-page{
+
+        z-index: 9999999;
+        position: absolute !important;
+        top: 104px;
+        margin-left: -223px;
+        border-radius: 6px;
+        padding: 10px !important;
+        padding: 6px;
+        font-size: 10px;
+        white-space: normal;
+        background-color: white !important;
+        box-shadow: 1px 1px 1px 1px lightgray;
+        color: #01916D;
+        white-space: normal;
+        width: 162px;
+        border-top: 3px solid white;
+        border-left: transparent;
+       
+    }
+    .new-feature-tooltip-login-page .green-border-btn{
+        float: right;
+        padding-top: 1px !important;
+        padding-bottom: 1px !important;
+    }
+    
+      .new-feature-tooltip-login-page:before{
+        content: '';
+        position: absolute;
+        left: 100%;
+        bottom: 64px !important;
+        border: 11px solid white;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-top-color: transparent !important;
+    }
+}
